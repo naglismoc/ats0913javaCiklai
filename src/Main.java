@@ -60,19 +60,19 @@ public class Main {
             }
         }
 
-//        int i = 0;
-//        long sum = 0;
-//        while (true){
-//            i++;
-//            sum += i;
-//            if(i % 1000000 == 0) {
-//                System.out.println("HAcKeD!" + i);
-//            }
-//            if(i == 2147000000){
-//                break;
-//            }
-//        }
-//        System.out.println(sum);
+        int i = 0;
+        long sum = 0;
+        while (true){
+            i++;
+            sum += i;
+            if(i % 1000000 == 0) {
+                System.out.println("HAcKeD!" + i);
+            }
+            if(i == 2147000000){
+                break;
+            }
+        }
+        System.out.println(sum);
 
         System.out.println(Math.round(Math.random()));
         System.out.println("------------------------------");
