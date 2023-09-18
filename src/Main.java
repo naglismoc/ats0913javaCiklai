@@ -60,19 +60,19 @@ public class Main {
             }
         }
 
-        int i = 0;
-        long sum = 0;
-        while (true){
-            i++;
-            sum += i;
-            if(i % 1000000 == 0) {
-                System.out.println("HAcKeD!" + i);
-            }
-            if(i == 2147000000){
-                break;
-            }
-        }
-        System.out.println(sum);
+//        int i = 0;
+//        long sum = 0;
+//        while (true){
+//            i++;
+//            sum += i;
+//            if(i % 1000000 == 0) {
+//                System.out.println("HAcKeD!" + i);
+//            }
+//            if(i == 2147000000){
+//                break;
+//            }
+//        }
+//        System.out.println(sum);
 
         System.out.println(Math.round(Math.random()));
         System.out.println("------------------------------");
@@ -102,6 +102,22 @@ public class Main {
             System.out.println(rndNum);
         }
 
+        System.out.println("------------------------------");
+
+
+        for (int a = 0; a < 3; a++) {
+            for (int b = 0; b < 3; b++) {
+                System.out.println("isorinis ciklas - " + a + " vidinis cikas " +b);
+            }
+        }
+
+        System.out.println("----------- daugybos lentele ----------------");
+        for (int a = 1; a <= 10 ; a++) {
+            for (int b = 1; b <= 10 ; b++) {
+                System.out.print(a * b + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
