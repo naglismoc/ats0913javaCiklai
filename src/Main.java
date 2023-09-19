@@ -1,123 +1,87 @@
 public class Main {
     public static void main(String[] args) {
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println("kepu skelbiu.lt " + i + " kortele");
-            System.out.println("dar biskis");
+        System.out.println("--- 1uzd ---");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("labas");
         }
-        System.out.println("na va, pabaigem");
+        System.out.println("--- 2uzd ---");
 
-        String text = "kazkoks tekstas";
-        //                  0       1           2       3           4       5       6       7           8
-        String[] names = {"Roman","Aivaras", "Sandra", "Asta", "Rimutis", "Agne", "Olga","Valerijus", "Naglis" };
-        String[] texts = new String[5];
-        int[] luckyNumbers = {8, 11, 3, 4 };
-
-        System.out.println(names);
-        System.out.println(luckyNumbers);
-        System.out.println(names.length);
-        System.out.println( names[3] );
-        System.out.println( names[4] );
-        System.out.println( names[5] );
-        System.out.println("------------------------------");
-
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i] );
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
         }
-        System.out.println("------------------------------");
-        names[0] = "Romanas";
+        System.out.println("--- 3uzd ---");
 
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i] );
+        String[] plants = {"azuolas","kiparisas","melisa","jonazole","klevas","lazdynas","bazilikas","morka","levanda", "maumedis","tuja", "melynoji vorine lelija"};
+
+        System.out.println("--- 4uzd ---");
+
+        for (int i = 0; i < plants.length; i++) {
+            System.out.println(plants[i]);
         }
-        names[0] = null;
-        System.out.println("------------------------------");
+        System.out.println("--- 6uzd ---");
 
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i] );
-        }
-
-        //return; break; continue;
-
-        System.out.println("------------------------------");
-        for (int i = 0; i < 20; i++) {
-            if(i % 2 != 0) {
+        for (int i = 10; i < 50; i++) {
+            if(i % 2 == 0){
                 System.out.println(i);
             }
         }
-        System.out.println("------------------------------");
-        for (int i = 0; i < 20; i++) {
-            if(i % 4 == 0) {
+        System.out.println("--- 7uzd ---");
+
+        for (int i = 10; i < 50; i++) {
+            if(i % 10 == 0){
                 continue;
             }
+            if(i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+        System.out.println("--- 7uzd alt ---");
+
+        for (int i = 10; i < 50; i++) {
+            if(i % 2 == 0 && i % 10 != 0){
+                System.out.println(i);
+            }
+        }
+        System.out.println("--- 7uzd alt2 ---");
+
+        for (int i = 10; i < 50; i++) {
+            if(i % 2 != 0 || i % 10 == 0){
+               continue;
+            }
             System.out.println(i);
         }
-        System.out.println("------------------------------");
-        for (int i = 1; i < 20; i++) {
-            System.out.println(i);
-            if(i % 4 == 0) {
-                break;
+
+        System.out.println("--- 8uzd ---");
+        int count = 0;
+        for (int i = 0; i < 20; i++) {
+            if(i % 2 == 0){
+              count++;
             }
         }
+        System.out.println(count);
+        System.out.println("--- 9uzd ---");
 
-//        int i = 0;
-//        long sum = 0;
-//        while (true){
-//            i++;
-//            sum += i;
-//            if(i % 1000000 == 0) {
-//                System.out.println("HAcKeD!" + i);
-//            }
-//            if(i == 2147000000){
-//                break;
-//            }
-//        }
-//        System.out.println(sum);
-
-        System.out.println(Math.round(Math.random()));
-        System.out.println("------------------------------");
-
-        while (Math.round(Math.random()) == 1){
-            System.out.println(1);
-        }
-        System.out.println("------------------------------");
-
-        while(true){
-           // System.out.println("while");
-            long rndNum =  Math.round(Math.random());
-            if(rndNum == 0){
-                break;
+        int count5 = 0;
+        int count7 = 0;
+        for (int i = 0; i < plants.length; i++) {
+            if(plants[i].length() < 5){
+                count5++;
             }
-            System.out.println(rndNum);
-        }
-
-        boolean shouldgo = true;
-
-        while (shouldgo){
-
-            long rndNum =  Math.round(Math.random());
-            if(rndNum == 0){
-                shouldgo = false;
-            }
-            System.out.println(rndNum);
-        }
-
-        System.out.println("------------------------------");
-
-
-        for (int a = 0; a < 3; a++) {
-            for (int b = 0; b < 3; b++) {
-                System.out.println("isorinis ciklas - " + a + " vidinis cikas " +b);
+            if(plants[i].length() > 7){
+                count7++;
             }
         }
+        System.out.println(count5 + " " + count7);
 
-        System.out.println("----------- daugybos lentele ----------------");
-        for (int a = 1; a <= 10 ; a++) {
-            for (int b = 1; b <= 10 ; b++) {
-                System.out.print(a * b + " ");
+        System.out.println("--- 10uzd ---");
+
+        int count5and7 = 0;
+        for (int i = 0; i < plants.length; i++) {
+            if(plants[i].length() > 5 && plants[i].length() < 10){
+                count5and7++;
             }
-            System.out.println();
         }
+        System.out.println(count5and7);
 
     }
 }
