@@ -1,87 +1,100 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("--- 1uzd ---");
-        for (int i = 0; i < 10; i++) {
-            System.out.println("labas");
-        }
-        System.out.println("--- 2uzd ---");
 
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
         }
-        System.out.println("--- 3uzd ---");
 
+        System.out.println("--------------------------");
+
+        for (int i = 10; i > 0; i--) {
+            System.out.println(i);
+        }
+        //                      0       1           2           3       4       5           6           7       8           9       10                11                    12
         String[] plants = {"azuolas","kiparisas","melisa","jonazole","klevas","lazdynas","bazilikas","morka","levanda", "maumedis","tuja", "melynoji vorine lelija"};
 
-        System.out.println("--- 4uzd ---");
 
-        for (int i = 0; i < plants.length; i++) {
+        for (int i = plants.length - 1; i >= 0; i--) {
             System.out.println(plants[i]);
         }
-        System.out.println("--- 6uzd ---");
 
-        for (int i = 10; i < 50; i++) {
-            if(i % 2 == 0){
-                System.out.println(i);
-            }
-        }
-        System.out.println("--- 7uzd ---");
-
-        for (int i = 10; i < 50; i++) {
-            if(i % 10 == 0){
-                continue;
-            }
-            if(i % 2 == 0){
-                System.out.println(i);
-            }
-        }
-        System.out.println("--- 7uzd alt ---");
-
-        for (int i = 10; i < 50; i++) {
-            if(i % 2 == 0 && i % 10 != 0){
-                System.out.println(i);
-            }
-        }
-        System.out.println("--- 7uzd alt2 ---");
-
-        for (int i = 10; i < 50; i++) {
-            if(i % 2 != 0 || i % 10 == 0){
-               continue;
-            }
+        for (int i = 23; i < 50 ; i+= 3) {
             System.out.println(i);
         }
 
-        System.out.println("--- 8uzd ---");
-        int count = 0;
-        for (int i = 0; i < 20; i++) {
-            if(i % 2 == 0){
-              count++;
-            }
+        for (String augalas : plants ) {
+            System.out.println(augalas);
         }
-        System.out.println(count);
-        System.out.println("--- 9uzd ---");
 
-        int count5 = 0;
-        int count7 = 0;
         for (int i = 0; i < plants.length; i++) {
-            if(plants[i].length() < 5){
-                count5++;
-            }
-            if(plants[i].length() > 7){
-                count7++;
+            String augalas = plants[i];
+            System.out.println(augalas);
+        }
+        System.out.println("--------------------------");
+
+        for (int i = 50; i >= 0; i-= 4) {
+            System.out.println(i);
+        }
+
+        System.out.println("--------------------------");
+
+        int i = 0;
+        for ( ; i < 10; ) {
+            System.out.println(i);
+            i++;
+        }
+
+
+        for ( ; true; ) {
+            System.out.println("forile");
+            if(Math.random() < 0.5){
+                break;
             }
         }
-        System.out.println(count5 + " " + count7);
-
-        System.out.println("--- 10uzd ---");
-
-        int count5and7 = 0;
-        for (int i = 0; i < plants.length; i++) {
-            if(plants[i].length() > 5 && plants[i].length() < 10){
-                count5and7++;
-            }
+        int a = 0;
+        while(a < 10){
+            System.out.println(a);
+            a++;
         }
-        System.out.println(count5and7);
+
+        do{
+            System.out.println("veikia");
+        }while(5 > 10);
+
+
+
+
+
+         a = 0;
+       do{
+            System.out.println(a);
+            a++;
+        } while(a < 10);
+
+
+        int[][] arr2d2 = new int[2][3];
+        arr2d2[0][0]= 5;
+        arr2d2[0][1]= 5;
+        arr2d2[0][2]= 5;
+
+        arr2d2[1][0]= 7;
+        arr2d2[1][1]= 8;
+        arr2d2[1][2]= 9;
+
+       int[][] arr2d = {
+               {5,5,5,5,5,5},
+               {7,8,9},
+               {6,3,5,14,7},
+               {14,8,10}
+       };
+
+
+        for (int y = 0; y < arr2d.length; y++) {//4
+            for (int x = 0; x < arr2d[y].length; x++) {//6  //3  //5
+                System.out.print(arr2d[y][x] +", ");
+            }
+            System.out.println();
+        }
 
     }
 }
