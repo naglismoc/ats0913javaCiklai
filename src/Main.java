@@ -10,6 +10,7 @@ public class Main {
         System.out.println(Math.random());
         sayHiTo(toNameCase("joNukas"));
         System.out.println(simpPi());
+        System.out.println(generateRndStr(1000));
     }
 
     public static double simpPi(){
@@ -28,4 +29,12 @@ public class Main {
         System.out.println("hello and wellcome to java lesson!");
     }
 
+    public static String generateRndStr(int length) {
+        String symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890";
+        String text = "";
+        for (int i = 0; i < length; i++) {
+         text += symbols.charAt((int) (Math.random()*symbols.length()));
+        }
+        return text;
+    }
 }
