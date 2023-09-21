@@ -1,40 +1,44 @@
 public class Main {
     public static void main(String[] args) {
-        sayHi();
-        sayHiTo("Naglis");
-        sayHiTo("Jonas");
-        String vardas = "Petras";
-        sayHiTo(vardas);
-        String formattedName = toNameCase("joNukas");//Jonukas
-        System.out.println(formattedName);
-        System.out.println(Math.random());
-        sayHiTo(toNameCase("joNukas"));
-        System.out.println(simpPi());
-        System.out.println(generateRndStr(1000));
+        int[] rndIntArr = rndIntArr(4,10,6);
+        printIntArr(rndIntArr);
+        System.out.println(sumIntArr(rndIntArr));
+        System.out.println(avgIntArr(rndIntArr));
+    }
+/*
+4. Sukurkite Funkciją kuri priima int[] tipo kintamąį, prasuka ciklą ir atspausdina kiekvieną skaičių.
+5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.
+6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
+7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
+
+ */
+    public static int rndInt (int min, int max){
+        return min + (int) Math.round(Math.random() * (max - min));
     }
 
-    public static double simpPi(){
-        return 3.14;
-    }
-
-    public static String toNameCase(String name){
-        name = ("" + name.charAt(0)).toUpperCase() + name.substring(1).toLowerCase();
-        return name;
-    }
-    public static void sayHiTo(String name){
-        System.out.println("hi " + name);
-    }
-
-    public static void sayHi(){
-        System.out.println("hello and wellcome to java lesson!");
-    }
-
-    public static String generateRndStr(int length) {
-        String symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890";
-        String text = "";
-        for (int i = 0; i < length; i++) {
-         text += symbols.charAt((int) (Math.random()*symbols.length()));
+    public static int[] rndIntArr(int min, int max, int len){
+        int[] arr = new int[len];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rndInt(min, max);
         }
-        return text;
+        return arr;
+    }
+
+    public static void printIntArr(int[] arr){
+        for (int number : arr) {
+            System.out.print(number + " ");
+        }
+        System.out.println();
+    }
+    public static int sumIntArr(int[] arr){
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    public static double avgIntArr(int[] arr){
+        return (double) sumIntArr(arr) / arr.length;
     }
 }
